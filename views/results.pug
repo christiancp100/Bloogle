@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= "Search"
+    link(rel='stylesheet', href='/stylesheets/results.css')
+    link(rel="icon", href="/img/favicon.png")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    link(href='//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/gallery-materialize.min.opt.css?0' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+
+  body
+    .placeholder(style='height: 15%; width: 100%; position: relative;')
+      nav#placeholder-navbar(style='background-color: rgba(0, 0, 0, 1);')
+        .nav-wrapper
+          .db
+            a(onclick="back()", style="cursor:pointer").back-btn
+              i.material-icons arrow_back
+              span(style="font-size:1.2rem;") Back
+    div(style="margin-top:0rem;")
+      each result in results
+        div(class="row")
+          div(class="col s12 m6 l6 offset-l3")
+            div(class="card red accent-2")
+              div(class="card-content white-text")
+                a(href=`${result.url}` class="white-text")
+                  span(class="card-title")=result.title
+                blockquote(class="text-flow")=result.content
+      else
+        div(class="row center", style="height:70vh;")
+          h1.white-text.valign-wrapper No Results Found, Sorry :)
+    footer
+      p Christian CP &copy; | IR 2019 | Blog Search Engine
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+    script(src='/js/back.js')

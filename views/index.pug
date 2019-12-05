@@ -7,10 +7,10 @@ block content
     h1(class="title") It's all about Context.
     h1(class="title-down") Think outside the box...
   div(id="cover")
-    form(method="GET" action="")
+    form(method="POST" action="/search")
       div(class="tb")
         div(class="td")
-          input(class="field" type="text" placeholder="Search" required)
+          input(class="field" type="text" name="search" placeholder="Search" required)
         div(class="td" id="s-cover")
           button(type="submit")
             div(id="s-circle")

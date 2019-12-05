@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+* {
+  outline: none;
+  font-size: 10px;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, rgba(203, 48, 102, 0.95), rgba(22, 191, 253, 0.95)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Nunito', 'Helevtica', sans-serif;
+}
+
+body.is-focus {
+  background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+footer{
+  background-color: #3c4245;
+  height: 4rem;
+  width: 100vw;
+  position: sticky;
+  top: 100%;
+  bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+footer p{
+  margin-top: 1rem;
+  font-family: 'Nunito', Lato;
+  font-size: 1.2rem;
+}
+
+blockquote{
+  font-size: 1rem !important;
+  border-left: 5px solid #3c4245 !important;
+}
